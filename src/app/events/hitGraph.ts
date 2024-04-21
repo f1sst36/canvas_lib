@@ -23,20 +23,15 @@ export class HitGraph {
 	}
 
 	addShapeToHash = (shape: Shape) => {
-		let uniqColorKey;
-		const colorsOnGraph = new Set(this.shapeByColorKey.keys());
-
 		while (true) {
 			const randomColor = getRandomColorKey();
 
-			if (!colorsOnGraph.has(randomColor)) {
-				uniqColorKey = randomColor;
+			if (!this.shapeByColorKey.has(randomColor)) {
+				this.shapeByColorKey.set(randomColor, shape);
 
 				break;
 			}
 		}
-
-		this.shapeByColorKey.set(uniqColorKey, shape);
 	};
 
 	getShapeByPoint = (point: Point) => {

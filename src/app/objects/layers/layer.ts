@@ -19,10 +19,12 @@ export class Layer {
 	}
 
 	render = () => {
-		this.canvas.ctx.reset();
+		requestAnimationFrame(() => {
+			this.canvas.ctx.reset();
 
-		this.container?.shapes.forEach((shape) => {
-			shape.draw(this);
+			this.container.shapes.forEach((shape) => {
+				shape.draw(this);
+			});
 		});
 	};
 }
