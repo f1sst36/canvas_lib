@@ -1,0 +1,16 @@
+{
+  "name": "2d-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8"
+  }
+}
